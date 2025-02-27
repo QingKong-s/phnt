@@ -9,13 +9,13 @@
 
 // This header file provides access to Win32, plus NTSTATUS values and some access mask values.
 
-#ifndef UNICODE
-#define UNICODE
-#endif
+// #ifndef UNICODE
+// #define UNICODE
+// #endif
 
-#ifndef _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#endif
+// #ifndef _CRT_SECURE_NO_WARNINGS
+// #define _CRT_SECURE_NO_WARNINGS
+// #endif
 
 #ifndef __cplusplus
 #ifndef CINTERFACE
@@ -62,13 +62,13 @@
 #define ENABLE_RTL_NUMBER_OF_V2
 #endif
 
-#ifndef INITGUID
-#define INITGUID
-#endif
+// #ifndef INITGUID
+// #define INITGUID
+// #endif
 
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
+// #ifndef WIN32_LEAN_AND_MEAN
+// #define WIN32_LEAN_AND_MEAN
+// #endif
 
 #ifndef WIN32_NO_STATUS
 #define WIN32_NO_STATUS

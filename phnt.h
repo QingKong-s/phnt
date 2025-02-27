@@ -78,39 +78,39 @@ extern "C" {
 #endif
 
 #if (PHNT_MODE != PHNT_MODE_KERNEL)
-#include <phnt_ntdef.h>
-#include <ntnls.h>
+#include "phnt_ntdef.h"
+#include "ntnls.h"
 #endif
 
-#include <ntkeapi.h>
-#include <ntldr.h>
-#include <ntexapi.h>
+#include "ntkeapi.h"
+#include "ntldr.h"
+#include "ntexapi.h"
 
-#include <ntbcd.h>
-#include <ntmmapi.h>
-#include <ntobapi.h>
-#include <ntpsapi.h>
+#include "ntbcd.h"
+#include "ntmmapi.h"
+#include "ntobapi.h"
+#include "ntpsapi.h"
 
 #if (PHNT_MODE != PHNT_MODE_KERNEL)
-#include <ntdbg.h>
-#include <ntioapi.h>
-#include <ntlpcapi.h>
-#include <ntpfapi.h>
-#include <ntpnpapi.h>
-#include <ntpoapi.h>
-#include <ntregapi.h>
-#include <ntrtl.h>
-#include <ntimage.h>
-#include <ntseapi.h>
-#include <nttmapi.h>
-#include <nttp.h>
-#include <ntxcapi.h>
-#include <ntwow64.h>
-#include <ntlsa.h>
-#include <ntsam.h>
-#include <ntmisc.h>
-#include <ntwmi.h>
-#include <ntzwapi.h>
+#include "ntdbg.h"
+#include "ntioapi.h"
+#include "ntlpcapi.h"
+#include "ntpfapi.h"
+#include "ntpnpapi.h"
+#include "ntpoapi.h"
+#include "ntregapi.h"
+#include "ntrtl.h"
+#include "ntimage.h"
+#include "ntseapi.h"
+#include "nttmapi.h"
+#include "nttp.h"
+#include "ntxcapi.h"
+#include "ntwow64.h"
+#include "ntlsa.h"
+#include "ntsam.h"
+#include "ntmisc.h"
+#include "ntwmi.h"
+#include "ntzwapi.h"
 #endif
 
 #ifdef __cplusplus
