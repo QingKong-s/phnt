@@ -773,18 +773,6 @@ NtReadVirtualMemory(
     _Out_opt_ PSIZE_T NumberOfBytesRead
     );
 
-// rev
-NTSYSCALLAPI
-NTSTATUS
-NTAPI
-NtWow64ReadVirtualMemory64(
-    _In_ HANDLE ProcessHandle,
-    _In_opt_ ULONGLONG BaseAddress,
-    _Out_writes_bytes_to_(NumberOfBytesToRead, *NumberOfBytesRead) PVOID Buffer,
-    _In_ ULONGLONG NumberOfBytesToRead,
-    _Out_opt_ PULONGLONG NumberOfBytesRead
-    );
-
 #if (PHNT_VERSION >= PHNT_WIN11)
 /**
  * Reads virtual memory from a process with extended options.
@@ -831,28 +819,6 @@ NtWriteVirtualMemory(
     _Out_opt_ PSIZE_T NumberOfBytesWritten
     );
 
-// rev
-/**
- * Writes virtual memory to a 64-bit process from a 32-bit process.
- *
- * @param ProcessHandle A handle to the process whose memory is to be written.
- * @param BaseAddress A pointer to the base address in the specified process to which to write.
- * @param Buffer A pointer to the buffer that contains the data to be written to the address space of the specified process.
- * @param NumberOfBytesToWrite The number of bytes to be written to the specified process.
- * @param NumberOfBytesWritten A pointer to a variable that receives the number of bytes transferred into the specified buffer.
- * @return NTSTATUS Successful or errant status.
- */
-NTSYSCALLAPI
-NTSTATUS
-NTAPI
-NtWow64WriteVirtualMemory64(
-    _In_ HANDLE ProcessHandle,
-    _In_opt_ ULONGLONG BaseAddress,
-    _In_reads_bytes_(NumberOfBytesToWrite) PVOID Buffer,
-    _In_ ULONGLONG NumberOfBytesToWrite,
-    _Out_opt_ PULONGLONG NumberOfBytesWritten
-    );
-
 /**
  * Changes the protection on a region of virtual memory.
  *
@@ -895,30 +861,6 @@ NtQueryVirtualMemory(
     _Out_writes_bytes_(MemoryInformationLength) PVOID MemoryInformation,
     _In_ SIZE_T MemoryInformationLength,
     _Out_opt_ PSIZE_T ReturnLength
-    );
-
-// rev
-/**
- * Queries information about a region of virtual memory in a 64-bit process from a 32-bit process.
- *
- * @param ProcessHandle A handle to the process whose memory information is to be queried.
- * @param BaseAddress A pointer to the base address of the region of pages to be queried.
- * @param MemoryInformationClass The type of information to be queried.
- * @param MemoryInformation A pointer to a buffer that receives the memory information.
- * @param MemoryInformationLength The size of the buffer pointed to by the MemoryInformation parameter.
- * @param ReturnLength A pointer to a variable that receives the number of bytes returned in the MemoryInformation buffer.
- * @return NTSTATUS Successful or errant status.
- */
-NTSYSCALLAPI
-NTSTATUS
-NTAPI
-NtWow64QueryVirtualMemory64(
-    _In_ HANDLE ProcessHandle,
-    _In_opt_ ULONGLONG BaseAddress,
-    _In_ MEMORY_INFORMATION_CLASS MemoryInformationClass,
-    _Out_writes_bytes_(MemoryInformationLength) PVOID MemoryInformation,
-    _In_ ULONGLONG MemoryInformationLength,
-    _Out_opt_ PULONGLONG ReturnLength
     );
 
 typedef struct _IO_STATUS_BLOCK* PIO_STATUS_BLOCK;
