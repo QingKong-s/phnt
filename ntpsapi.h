@@ -1958,18 +1958,6 @@ NtQueryInformationProcess(
     _Out_opt_ PULONG ReturnLength
     );
 
-// rev
-NTSYSCALLAPI
-NTSTATUS
-NTAPI
-NtWow64QueryInformationProcess64(
-    _In_ HANDLE ProcessHandle,
-    _In_ PROCESSINFOCLASS ProcessInformationClass,
-    _Out_writes_bytes_(ProcessInformationLength) PVOID ProcessInformation,
-    _In_ ULONG ProcessInformationLength,
-    _Out_opt_ PULONG ReturnLength
-    );
-
 /**
  * Sets information for the specified process.
  *
